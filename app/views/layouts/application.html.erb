@@ -1,14 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8">
   <title>Freight</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'layouts/header' %>
 
-<%= yield %>
-
+  <div id="container">
+    <section id="content">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </section>
+    <section id="sidebar">
+    </section>
+  </div>
 </body>
 </html>
